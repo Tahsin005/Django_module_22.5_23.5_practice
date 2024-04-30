@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="flex justify-center mt-10">
+    <form method="post" class="">
+        {% csrf_token %}
+        <div>
+            <label for="id_reciever" class="text-white">Reciever</label>
+            {{form.reciever}}
+        </div>
+        <div>
+            <label for="id_amount" class="text-white">Amount</label>
+            {{form.amount}}
+        </div>
+        <div class="flex w-full justify-center mt-10">
+            <button class="bg-blue-900 text-white hover:text-blue-900 hover:bg-white border border-blue-900 font-bold px-4 py-2 rounded-lg" type="submit">
+            Transfer
+        </button>
+    </form>
+</div>
+
+{% endblock content %}
